@@ -4,7 +4,7 @@ import Controllers.ClienteController as ClienteController
 import pandas as pd
 
 def List():
-    st.title("Cliente")
+   """  st.title("Cliente")
     costumerList = []
 
     for item in ClienteController.SelecionarTodos():
@@ -14,4 +14,4 @@ def List():
         costumerList,
         columns=['Nome', 'Idade', 'Profissão']
     )
-    st.table(df)
+    st.table(df)  """
