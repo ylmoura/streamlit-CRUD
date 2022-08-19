@@ -4,7 +4,15 @@ import models.Cliente as cliente
 
 
 def IncluirClientePage():
-    st.title("Cliente")
+    idAlteracao = st.experimental_get_query_params()
+    st.experimental_set_query_params()
+    if idAlteracao.get("id") != None:
+        idAlteracao = idAlteracao.get("id")[0]
+        st.write(idAlteracao)
+        st.write(idAlteracao)
+        st.title("Alterar cliente")
+    else:
+        st.title("Cliente")
     with st.form(key="include_cliente"):
         input_name = st.text_input(label="insira o seu nome")
         input_age = st.number_input(label="Insira sua idade", format="%d",step=1)
